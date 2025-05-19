@@ -1,48 +1,45 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<!-- Hero video section -->
-<section class="position-relative" style="height: 100vh; overflow: hidden;">
-  <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover;">
-    <source src="{{ url_for('static', filename='video/f1.mp4') }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center bg-dark bg-opacity-50">
-    <h1 class="display-4 fw-bold text-white">F1 Ticketing Agency</h1>
-    <p class="lead text-light mb-4">VIP & Hospitality Access</p>
-    <div>
-      <a href="/contact" class="btn btn-danger btn-lg me-2">Contact Us</a>
-      <a href="/about" class="btn btn-outline-light btn-lg">Explore</a>
-    </div>
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4 fw-bold">F1 Ticketing Agency</h1>
+    <p class="lead">VIP & Hospitality Access to the World's Premier Races</p>
+    <a href="/contact" class="btn btn-danger btn-lg mt-4">Contact Us</a>
   </div>
 </section>
 
-<!-- Events Preview -->
-<section class="py-5 bg-black text-white text-center">
+<section class="py-5 bg-dark text-light text-center">
   <div class="container">
-    <h2 class="mb-5 text-danger">2025 Featured Events</h2>
+    <h2 class="mb-4 text-danger">2025 Featured Events</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="card bg-dark text-light h-100">
+        <div class="card bg-black text-light h-100">
+          <img src="/static/img/spain.jpg" class="card-img-top" alt="Spain GP">
+          <div class="card-body">
+            <h5 class="card-title">Spanish Grand Prix</h5>
+            <p class="card-text">June 1, 2025 – Circuit de Barcelona-Catalunya</p>
+            <a href="/events/spain" class="btn btn-outline-danger btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-black text-light h-100">
+          <img src="/static/img/monaco.jpg" class="card-img-top" alt="Monaco GP">
           <div class="card-body">
             <h5 class="card-title">Monaco Grand Prix</h5>
-            <p class="card-text">May 25, 2025 - Monte Carlo</p>
+            <p class="card-text">May 25, 2025 – Circuit de Monaco</p>
+            <a href="/events/monaco" class="btn btn-outline-danger btn-sm">Learn More</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card bg-dark text-light h-100">
+        <div class="card bg-black text-light h-100">
+          <img src="/static/img/canada.jpg" class="card-img-top" alt="Canada GP">
           <div class="card-body">
-            <h5 class="card-title">British Grand Prix</h5>
-            <p class="card-text">July 6, 2025 - Silverstone</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card bg-dark text-light h-100">
-          <div class="card-body">
-            <h5 class="card-title">Italian Grand Prix</h5>
-            <p class="card-text">September 7, 2025 - Monza</p>
+            <h5 class="card-title">Canadian Grand Prix</h5>
+            <p class="card-text">June 15, 2025 – Circuit Gilles Villeneuve</p>
+            <a href="/events/canada" class="btn btn-outline-danger btn-sm">Learn More</a>
           </div>
         </div>
       </div>

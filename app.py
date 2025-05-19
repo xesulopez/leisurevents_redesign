@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -15,9 +15,17 @@ def about():
 def contact():
     return render_template('contact.html')
 
-@app.route('/submit_form', methods=['POST'])
-def submit_form():
-    return redirect("https://formspree.io/f/xdoqzygg")
+@app.route('/events/spain')
+def event_spain():
+    return render_template('event_spain.html')
+
+@app.route('/events/monaco')
+def event_monaco():
+    return render_template('event_monaco.html')
+
+@app.route('/events/canada')
+def event_canada():
+    return render_template('event_canada.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
